@@ -1,0 +1,54 @@
+:root {
+    /* Définition des couleurs de base */
+    --blue-sky-1: #16193B; /* Bleu nuit */
+    --blue-sky-2: #35478C; /* Bleu foncé */
+    --blue-sky-3: #4E7AC7; /* Bleu vif */
+    --blue-sky-4: #7FB2F0; /* Bleu clair */
+    --blue-sky-5: #ADD5F7; /* Bleu très clair */
+    --Noir-6: #000000; /* Noir */
+    --Blanc-7: #ffffff; /* Blanc */
+
+    /* Utilisation des couleurs pour différents éléments */
+    --color-title: var(--blue-sky-1); /* Couleur pour les titres */
+    --color-subtitle: var(--blue-sky-3); /* Couleur pour les sous-titres */
+    --color-paragraph: var(--blue-sky-2); /* Couleur pour les paragraphes */
+    --color-border: var(--blue-sky-4); /* Couleur pour les bordures */
+    --color-backgroundFoncé: var(--blue-sky-1); /* Couleur de fond foncée */
+    --color-background: var(--blue-sky-5); /* Couleur de fond général */
+    --color-text: var(--Noir-6); /* Couleur pour le texte de fond */
+    --color-white: var(--Blanc-7); /* Couleur blanche pour le texte de fond d'une balise */
+
+    /* Polices */
+    --font-title: 'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --font-subtitle: 'Roboto', sans-serif;
+
+    /* Taille de police standard et poids */
+    --font-size-normal: 16px; /* Taille de police standard pour le texte */
+    --font-size-title: 28px; /* Taille de police pour les grands titres */
+    --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
+    --font-weight-normal: 400; /* Poids normal de la police */
+    --font-weight-bold: 700; /* Poids en gras */
+    /* Pour le profil la taille du nom et du sous-titre */
+    --font-size-titleProfil: 45px;
+    --font-size-subtitleProfil: 30px;
+}
+
+
+/*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
+
+
+/*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    overflow-x: hidden;
+}
