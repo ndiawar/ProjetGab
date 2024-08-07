@@ -42,13 +42,52 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-    color: var(--color-text);
-    font-family: var(--font-text);
-    font-size: var(--font-size-normal);
-    font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
+/*Debut Partie Etienne*/
+.container {
+  background-color:var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--color-background);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
 }
+.service {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(black);
+  text-align: center;
+}
+welcome-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(black);
+}
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #05162b;
+}
+.button:hover {
+  background-color: var(#35478c);
+}
+.button.retrait {
+  background-color: var(rgba(1, 4, 24, 0.911));
+  color: var(--color-white);
+}
+.button.solde {
+  background-color:var(rgba(1, 4, 24, 0.911));
+  color: var(--color-white);
+}
+.button.depot {
+  background-color: var(rgba(1, 4, 24, 0.911));
+  color: var(--color-white);
+}
+/*Fin Partie Etienne*/
