@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interface Web de votre banque</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="service">Service</h1>
+        <p id="welcome-message">Pour un retrait veillez choisir parmis les options suivant:</p>
+        <button class="button retrait" onclick="alert('Accès au retrait')">10.000</button>
+        <button class="button solde" onclick="alert('Vérification du solde')">50.000</button>
+        <button class="button depot" onclick="alert('Accès au dépôt')">Autres choix</button>
+    </div>
+
+    <script>
+        // Remplacez 'Client' par le nom réel du client
+        document.getElementById('client-name').textContent = 'John Doe';
+    </script>
+</body>
+</html>
