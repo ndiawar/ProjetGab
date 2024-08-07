@@ -51,4 +51,87 @@ body {
     font-size: var(--font-size-normal);
     font-weight: var(--font-weight-normal);
     overflow-x: hidden;
+    background-color: var(--blue-sky-1);
 }
+
+/* PARTIE DU RECU*/
+.mon_recu{
+   padding: 20px;
+    width: 30%;
+   text-align: left;
+   border: var(--color-border);
+   background-color: #ffffff;
+   color: var(--blue-sky-1);
+   margin-left: 30%;
+   border: 1px solid white;
+   margin-top: 20%;
+   height: 300px;
+   font-size: 20px;
+
+}
+h1{
+    text-align: center;
+}
+
+/*Partie Khalifa*/
+/*Style pour le modal (masqué par défaut) */
+
+#openModalButton{
+    background-color: var(--color-white);
+    color: var(--color-backgroundFoncé);
+    height: 40px;
+    width: 200px;
+    font-size: var(--font-subtitle);
+    font-family: var(--font-title);
+    font-weight: var(--font-weight-bold);
+    border-radius: 5px;
+    border: 1px solid var(--color-backgroundFoncé);
+}
+
+#openModalButton:hover{
+    background-color: var(--color-paragraph);
+    color: var(--color-white);
+    border-radius: 15px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/* Style pour le contenu du modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid var(--color-title);
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.close {
+    color: var(--color-text);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(85, 10, 10);
+    text-decoration: none;
+}
+
+/*Fin Partie*/
