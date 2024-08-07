@@ -6,7 +6,7 @@
     --blue-sky-4: #7FB2F0; /* Bleu clair */
     --blue-sky-5: #ADD5F7; /* Bleu très clair */
     --Noir-6: #000000; /* Noir */
-    --White-7: #ffffff; /* Blanc */
+    --blue-sky-1: #ffffff; /* Blanc */
 
     /* Utilisation des couleurs pour différents éléments */
     --color-title: var(--blue-sky-1); /* Couleur pour les titres */
@@ -16,7 +16,7 @@
     --color-backgroundFoncé: var(--blue-sky-1); /* Couleur de fond foncée */
     --color-background: var(--blue-sky-5); /* Couleur de fond général */
     --color-text: var(--Noir-6); /* Couleur pour le texte de fond */
-    --color-white: var(--White-7); /* Couleur blanche pour le texte de fond d'une balise */
+    --color-white: var(--blue-sky-1); /* Couleur blanche pour le texte de fond d'une balise */
 
     /* Polices */
     --font-title: 'Montserrat', sans-serif;
@@ -167,7 +167,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(101, 150, 214, 0.1); /* Utilisez le même box-shadow que .login-container */
     padding: 40px; /* Assurez-vous que le padding est le même pour le confort */
     max-width: 900px; /* Assurez-vous qu'il correspond à max-width de .login-container */
-    height: 350px; /* Assurez-vous qu'il correspond à height de .login-container */
+    height: 500px; /* Assurez-vous qu'il correspond à height de .login-container */
     width: 100%;
     margin: 0 auto; /* Centrer le conteneur */
 }
