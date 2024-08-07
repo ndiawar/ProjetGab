@@ -1,0 +1,210 @@
+:root {
+    /* Définition des couleurs de base */
+    --blue-sky-1: #16193B; /* Bleu nuit */
+    --blue-sky-2: #35478C; /* Bleu foncé */
+    --blue-sky-3: #4E7AC7; /* Bleu vif */
+    --blue-sky-4: #7FB2F0; /* Bleu clair */
+    --blue-sky-5: #ADD5F7; /* Bleu très clair */
+    --Noir-6: #000000; /* Noir */
+    --white-7: #ffffff;
+
+    /* Utilisation des couleurs pour différents éléments */
+    --color-title: var(--blue-sky-1); /* Couleur pour les titres */
+    --color-subtitle: var(--blue-sky-3); /* Couleur pour les sous-titres */
+    --color-paragraph: var(--blue-sky-2); /* Couleur pour les paragraphes */
+    --color-border: var(--blue-sky-4); /* Couleur pour les bordures */
+    --color-backgroundFoncé: var(--blue-sky-1); /* Couleur de fond foncée */
+    --color-background: var(--blue-sky-5); /* Couleur de fond général */
+    --color-text: var(--Noir-6); /* Couleur pour le texte de fond */
+    --color-white: var(--white-7); /* Couleur blanche pour le texte de fond d'une balise */
+
+    /* Polices */
+    --font-title: 'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --font-subtitle: 'Roboto', sans-serif;
+
+    /* Taille de police standard et poids */
+    --font-size-normal: 16px; /* Taille de police standard pour le texte */
+    --font-size-title: 28px; /* Taille de police pour les grands titres */
+    --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
+    --font-weight-normal: 400; /* Poids normal de la police */
+    --font-weight-bold: 700; /* Poids en gras */
+    /* Pour le profil la taille du nom et du sous-titre */
+    --font-size-titleProfil: 45px;
+    --font-size-subtitleProfil: 30px;
+}
+
+
+/*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
+
+
+/*Initialisation de notre body pour supprimer les marges et choix du type de police pour notre site*/
+* {
+  box-sizing: border-box;
+}
+
+/* Style global pour le corps de la page */
+body, html {
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-normal);
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-backgroundFoncé);/**/
+}
+
+/* Conteneur principal qui tient la page de connexion */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(101, 150, 214, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Style pour la section du formulaire de connexion */
+.login-form {
+    flex: 1;
+    padding: 40px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Style pour les titres et formulaires dans la section de connexion */
+.login-form h2 {
+    margin-bottom: 20px;
+    color: var(--color-title);
+    font-size: var(--font-size-title);
+    font-family: var(--font-title);
+    font-weight: var(--font-weight-bold);
+    padding: 5px 0 60px 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    font-size: var(--font-subtitle);
+    font-weight: var(--font-weight-normal);
+    font-family: var(--font-text);
+    color: var(--color-title);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-title);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-title);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-backgroundFoncé);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-border);
+}
+
+/* Style pour la section de bienvenue avec le logo */
+.welcome-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-backgroundFoncé);
+}
+
+.welcome-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/*Debut partie yaye*/
+.container {
+    background-color:var(--color-white);
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--color-background);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+  }
+  h1.bienvenue{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(black);
+  }
+  p.welcome-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(black);
+  }
+  .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #05162b;
+  }
+  .button:hover {
+    background-color: var(#35478c);
+  }
+  .button.retrait {
+    background-color: var(rgba(1, 4, 24, 0.911));
+    color: var(--color-white);
+  }
+  .button.solde {
+    background-color:var(rgba(1, 4, 24, 0.911));
+    color: var(--color-white);
+  }
+  .button.retour {
+    background-color: var(rgba(1, 4, 24, 0.911));
+    color: var(--color-white);
+  }
+  /* fin partie yaye*/
