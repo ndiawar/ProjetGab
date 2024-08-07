@@ -65,8 +65,8 @@ body, html {
     width: 100%;
     max-width: 900px;
     height: 500px;
-    background-color: var(--color-white);
-    box-shadow: 0 4px 8px rgba(101, 150, 214, 0.1);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -75,7 +75,7 @@ body, html {
 .login-form {
     flex: 1;
     padding: 40px;
-    background-color: var(--color-white);
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,31 +84,23 @@ body, html {
 /* Style pour les titres et formulaires dans la section de connexion */
 .login-form h2 {
     margin-bottom: 20px;
-    color: var(--color-title);
-    font-size: var(--font-size-title);
-    font-family: var(--font-title);
-    font-weight: var(--font-weight-bold);
-    padding: 5px 0 60px 50px;
+    color: #333;
 }
 
 .form-group {
     margin-bottom: 15px;
-    font-size: var(--font-subtitle);
-    font-weight: var(--font-weight-normal);
-    font-family: var(--font-text);
-    color: var(--color-title);
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: var(--color-title);
+    color: #555;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--color-title);
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
@@ -118,7 +110,7 @@ button {
     width: 100%;
     padding: 10px;
     background-color: var(--color-backgroundFoncé);
-    color: var(--color-white);
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -127,7 +119,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--color-border);
+    background-color: #45a049;
 }
 
 /* Style pour la section de bienvenue avec le logo */

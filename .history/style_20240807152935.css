@@ -159,3 +159,48 @@ button:hover {
     font-size: 18px;
     margin: 0;
 }
+
+
+
+/*Partie Khalifa*/
+/* Style pour le modal (masqué par défaut) */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Fixé en plein écran */
+    z-index: 1; /* Au-dessus de tout le reste */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    overflow: auto; /* Activer le défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.4); /* Couleur de fond semi-transparente */
+}
+
+/* Style pour le contenu du modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centré verticalement et horizontalement */
+    padding: 20px;
+    border: 1px solid var(--color-title);
+    width: 80%; /* Largeur du contenu du modal */
+    max-width: 500px; /* Largeur maximale */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+    color: var(--color-text);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(85, 10, 10);
+    text-decoration: none;
+}
+
+/*Fin Partie*/

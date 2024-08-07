@@ -1,0 +1,12 @@
+[
+    { "idCard": "1001", "mdp": "512348", "etatCmpt": true, "nom": "Dupont", "prenom": "Jean" },
+    { "idCard": "1002", "mdp": "956784", "etatCmpt": false, "nom": "Martin", "prenom": "Marie" },
+    { "idCard": "1003", "mdp": "456376", "etatCmpt": false, "nom": "Durand", "prenom": "Pierre" },
+    { "idCard": "1004", "mdp": "987127", "etatCmpt": false, "nom": "Leroy", "prenom": "Luc" },
+    { "idCard": "1005", "mdp": "456325", "etatCmpt": false, "nom": "Moreau", "prenom": "Sophie" },
+    { "idCard": "1006", "mdp": "548329", "etatCmpt": false, "nom": "Simon", "prenom": "Laura" },
+    { "idCard": "1007", "mdp": "123451", "etatCmpt": false, "nom": "Lambert", "prenom": "Alex" },
+    { "idCard": "1008", "mdp": "678903", "etatCmpt": false, "nom": "Garcia", "prenom": "Elena" },
+    { "idCard": "1009", "mdp": "112232", "etatCmpt": false, "nom": "Bernard", "prenom": "Nicolas" },
+    { "idCard": "1010", "mdp": "445560", "etatCmpt": false, "nom": "Petit", "prenom": "Lucie" }
+]

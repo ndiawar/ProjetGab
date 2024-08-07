@@ -88,7 +88,7 @@ body, html {
     font-size: var(--font-size-title);
     font-family: var(--font-title);
     font-weight: var(--font-weight-bold);
-    padding: 5px 0 60px 50px;
+    padding: 5px 0 60px 40px;
 }
 
 .form-group {
