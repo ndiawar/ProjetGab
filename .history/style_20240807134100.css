@@ -42,16 +42,6 @@
 * {
   box-sizing: border-box;
 }
-<<<<<<< HEAD
-/*Debut Partie Etienne*/
-.container {
-  background-color:var(--color-white);
-  border-radius: 8px;
-  box-shadow: 0 0 10px var(--color-background);
-  padding: 20px;
-  max-width: 500px;
-  width: 100%;
-=======
 
 /* Style global pour le corps de la page */
 body, html {
@@ -66,17 +56,19 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-backgroundFoncé);/**/
+    background: url(./image/accueil.png);
+    background-size: cover; /* Couvre toute la page */
+    background-color: #f0f4f8;
 }
 
 /* Conteneur principal qui tient la page de connexion */
 .login-container {
     display: flex;
-    width: 100%;
+    width: 80%;
     max-width: 900px;
     height: 500px;
-    background-color: var(--color-white);
-    box-shadow: 0 4px 8px rgba(101, 150, 214, 0.1);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -85,7 +77,7 @@ body, html {
 .login-form {
     flex: 1;
     padding: 40px;
-    background-color: var(--color-white);
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,31 +86,23 @@ body, html {
 /* Style pour les titres et formulaires dans la section de connexion */
 .login-form h2 {
     margin-bottom: 20px;
-    color: var(--color-title);
-    font-size: var(--font-size-title);
-    font-family: var(--font-title);
-    font-weight: var(--font-weight-bold);
-    padding: 5px 0 60px 50px;
+    color: #333;
 }
 
 .form-group {
     margin-bottom: 15px;
-    font-size: var(--font-subtitle);
-    font-weight: var(--font-weight-normal);
-    font-family: var(--font-text);
-    color: var(--color-title);
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: var(--color-title);
+    color: #555;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid var(--color-title);
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
@@ -127,8 +111,8 @@ body, html {
 button {
     width: 100%;
     padding: 10px;
-    background-color: var(--color-backgroundFoncé);
-    color: var(--color-white);
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -137,16 +121,17 @@ button {
 }
 
 button:hover {
-    background-color: var(--color-border);
+    background-color: #45a049;
 }
 
 /* Style pour la section de bienvenue avec le logo */
 .welcome-section {
     flex: 1;
+    background-color: #4CAF50;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-backgroundFoncé);
+    color: white;
 }
 
 .welcome-content {
@@ -155,8 +140,7 @@ button:hover {
 }
 
 .logo {
-    width: 350px;
-    height: 350px;
+    width: 100px;
     margin-bottom: 20px;
 }
 
@@ -168,45 +152,4 @@ button:hover {
 .welcome-section p {
     font-size: 18px;
     margin: 0;
->>>>>>> d30bb4c (On n'a mi en service l'authentification Compléte pour notre Gab)
 }
-.service {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: var(black);
-  text-align: center;
-}
-welcome-message {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: var(black);
-}
-.button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  background-color: #05162b;
-}
-.button:hover {
-  background-color: var(#35478c);
-}
-.button.retrait {
-  background-color: var(rgba(1, 4, 24, 0.911));
-  color: var(--color-white);
-}
-.button.solde {
-  background-color:var(rgba(1, 4, 24, 0.911));
-  color: var(--color-white);
-}
-.button.depot {
-  background-color: var(rgba(1, 4, 24, 0.911));
-  color: var(--color-white);
-}
-/*Fin Partie Etienne*/

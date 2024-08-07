@@ -1,4 +1,3 @@
-//Déclaration du tableau utilisateurs avec des valeurs d'objets
 const utilisateurs = [
     { idCard: '1001', mdp: '51234', etatCmpt: false, nom: 'Dupont', prenom: 'Jean' },
     { idCard: '1002', mdp: '95678', etatCmpt: false, nom: 'Martin', prenom: 'Marie' },
@@ -12,34 +11,30 @@ const utilisateurs = [
     { idCard: '1010', mdp: '44556', etatCmpt: false, nom: 'Petit', prenom: 'Lucie' }
 ];
 
-//Sauvegarder les données initials de l'utilisateur dans localStorage si ce n'est pas déja fait
+// Save initial user data to localStorage if not already set
 if (!localStorage.getItem('utilisateurs')) {
     localStorage.setItem('utilisateurs', JSON.stringify(utilisateurs));
 }
 
-//Déclaration de variable pour enregister le nombre maximum de tentative 
-//et une variable pour mettre dans le local storage si l'utilisateur est bloqué aprés trois tentative
 const maxAttempts = 3;
 const userAttempts = JSON.parse(localStorage.getItem('userAttempts')) || {};
 
-// Charge les données de l'utilisateur depuis le LocalStorage
+// Load users from localStorage
 let storedUsers = JSON.parse(localStorage.getItem('utilisateurs')) || [];
-//On recupère lesélément id du formulaire pour interagir avec l'événement
-//Récupére id du paragraphe pour afficher les msg d'rreurs
+
 const loginForm = document.getElementById('loginForm');
 const errorMessage = document.getElementById('errorMessage');
-// Lafonction qui lance l'événement connexion
+
 loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
-//On recupère les valeurs saisient par les utilisateurs
+
     const identifiant = document.getElementById('identifiant').value;
     const password = document.getElementById('password').value;
-//On recherche l'utilisateur dans le store qui enregistre notre tableau  
-//Pour le vérifier ensuite avec l'information que l'utilisateur à saisie "identifiant"
+
     const utilisateur = storedUsers.find(u => u.idCard === identifiant);
 
     if (!utilisateur) {
-        errorMessage.textContent = "Identifiant de carte introuvable,Veuillez réessayer.";
+        errorMessage.textContent = "Identifiant de carte introuvable.";
         errorMessage.style.display = "block";
         return;
     }
@@ -69,9 +64,9 @@ loginForm.addEventListener('submit', function(event) {
         return;
     }
 
-    userAttempts[identifiant] = 0; // Réinitialise les tentatives
+    userAttempts[identifiant] = 0; // Reset attempts on successful login
     localStorage.setItem('userAttempts', JSON.stringify(userAttempts));
     alert(`Authentification réussie! Bienvenue, ${utilisateur.prenom} ${utilisateur.nom}.`);
     errorMessage.style.display = "none";
-    window.location.href = './bienvenue.html'; // Redirection vers la page bienvenue
+    window.location.href = 'dashboard.html'; // Replace with actual dashboard URL
 });

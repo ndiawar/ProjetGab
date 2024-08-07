@@ -42,16 +42,6 @@
 * {
   box-sizing: border-box;
 }
-<<<<<<< HEAD
-/*Debut Partie Etienne*/
-.container {
-  background-color:var(--color-white);
-  border-radius: 8px;
-  box-shadow: 0 0 10px var(--color-background);
-  padding: 20px;
-  max-width: 500px;
-  width: 100%;
-=======
 
 /* Style global pour le corps de la page */
 body, html {
@@ -168,45 +158,49 @@ button:hover {
 .welcome-section p {
     font-size: 18px;
     margin: 0;
->>>>>>> d30bb4c (On n'a mi en service l'authentification Compléte pour notre Gab)
 }
-.service {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: var(black);
-  text-align: center;
+
+
+
+/*Partie Khalifa*/
+/* Style pour le modal (masqué par défaut) */
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed; /* Fixé en plein écran */
+    z-index: 1; /* Au-dessus de tout le reste */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur totale */
+    height: 100%; /* Hauteur totale */
+    overflow: auto; /* Activer le défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.4); /* Couleur de fond semi-transparente */
 }
-welcome-message {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: var(black);
+
+/* Style pour le contenu du modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centré verticalement et horizontalement */
+    padding: 20px;
+    border: 1px solid var(--color-title);
+    width: 80%; /* Largeur du contenu du modal */
+    max-width: 500px; /* Largeur maximale */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  background-color: #05162b;
+
+/* Style pour le bouton de fermeture */
+.close {
+    color: var(--color-text);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
-.button:hover {
-  background-color: var(#35478c);
+
+.close:hover,
+.close:focus {
+    color: rgb(85, 10, 10);
+    text-decoration: none;
 }
-.button.retrait {
-  background-color: var(rgba(1, 4, 24, 0.911));
-  color: var(--color-white);
-}
-.button.solde {
-  background-color:var(rgba(1, 4, 24, 0.911));
-  color: var(--color-white);
-}
-.button.depot {
-  background-color: var(rgba(1, 4, 24, 0.911));
-  color: var(--color-white);
-}
-/*Fin Partie Etienne*/
+
+/*Fin Partie*/
