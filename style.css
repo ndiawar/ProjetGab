@@ -6,7 +6,7 @@
     --blue-sky-4: #7FB2F0; /* Bleu clair */
     --blue-sky-5: #ADD5F7; /* Bleu très clair */
     --Noir-6: #000000; /* Noir */
-    --Blanc-7: #ffffff; /* Blanc */
+    --blue-sky-1: #ffffff; /* Blanc */
 
     /* Utilisation des couleurs pour différents éléments */
     --color-title: var(--blue-sky-1); /* Couleur pour les titres */
@@ -16,7 +16,7 @@
     --color-backgroundFoncé: var(--blue-sky-1); /* Couleur de fond foncée */
     --color-background: var(--blue-sky-5); /* Couleur de fond général */
     --color-text: var(--Noir-6); /* Couleur pour le texte de fond */
-    --color-white: var(--Blanc-7); /* Couleur blanche pour le texte de fond d'une balise */
+    --color-white: var(--blue-sky-1); /* Couleur blanche pour le texte de fond d'une balise */
 
     /* Polices */
     --font-title: 'Montserrat', sans-serif;
@@ -43,12 +43,51 @@
   box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    color: var(--color-text);
-    font-family: var(--font-text);
-    font-size: var(--font-size-normal);
-    font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
+/*Debut partie yaye*/
+.container {
+  background-color:var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--color-background);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
 }
+h1.bienvenue{
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(black);
+}
+p.welcome-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(black);
+}
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #05162b;
+}
+.button:hover {
+  background-color: var(#35478c);
+}
+.button.retrait {
+  background-color: var(rgba(1, 4, 24, 0.911));
+  color: var(--color-white);
+}
+.button.solde {
+  background-color:var(rgba(1, 4, 24, 0.911));
+  color: var(--color-white);
+}
+.button.retour {
+  background-color: var(rgba(1, 4, 24, 0.911));
+  color: var(--color-white);
+}
+/* fin partie yaye*/
