@@ -1,4 +1,3 @@
- 
 :root {
     /* Définition des couleurs de base */
     --blue-sky-1: #16193B; /* Bleu nuit */
@@ -25,11 +24,14 @@
     --font-subtitle: 'Roboto', sans-serif;
 
     /* Taille de police standard et poids */
-    --font-size-normal: 18px; /* Taille de police standard pour le texte */
-    --font-size-title: 32px; /* Taille de police pour les grands titres */
-    --font-size-subtitle: 25px; /* Taille de police pour les sous-titres */
-    --font-weight-normal: 450; /* Poids normal de la police */
-    --font-weight-bold: 750; /* Poids en gras */
+    --font-size-normal: 16px; /* Taille de police standard pour le texte */
+    --font-size-title: 28px; /* Taille de police pour les grands titres */
+    --font-size-subtitle: 20px; /* Taille de police pour les sous-titres */
+    --font-weight-normal: 400; /* Poids normal de la police */
+    --font-weight-bold: 700; /* Poids en gras */
+    /* Pour le profil la taille du nom et du sous-titre */
+    --font-size-titleProfil: 45px;
+    --font-size-subtitleProfil: 30px;
 }
 
 
@@ -165,17 +167,10 @@ button:hover {
     box-shadow: 0 4px 8px rgba(101, 150, 214, 0.1); /* Utilisez le même box-shadow que .login-container */
     padding: 40px; /* Assurez-vous que le padding est le même pour le confort */
     max-width: 900px; /* Assurez-vous qu'il correspond à max-width de .login-container */
-    height: 350px; /* Assurez-vous qu'il correspond à height de .login-container */
+    height: 500px; /* Assurez-vous qu'il correspond à height de .login-container */
     width: 100%;
     margin: 0 auto; /* Centrer le conteneur */
 }
-
-.service {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(black);
-    text-align: center;
-  }
 
 h1.bienvenue {
     font-size: 24px;
@@ -189,71 +184,28 @@ p.welcome-message {
     color: var(--color-title); /* Utilisez la variable de couleur définie */
 }
 
-.service {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: var(black);
-  text-align: center;
-}
-#welcome-message {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: var(black);
-}
 .button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  background-color: var(--color-backgroundFoncé);
-}
-.button:hover {
-  background-color: var(--color-border);
-}
-/*Fin Partie Etienne*/
-
-/* Style pour le modal (masqué par défaut) */
-.modal {
-    display: none; /* Masqué par défaut */
-    position: fixed; /* Fixé en plein écran */
-    z-index: 1; /* Au-dessus de tout le reste */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largeur totale */
-    height: 100%; /* Hauteur totale */
-    overflow: auto; /* Activer le défilement si nécessaire */
-    background-color: rgba(0, 0, 0, 0.4); /* Couleur de fond semi-transparente */
-}
-
-/* Style pour le contenu du modal */
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* Centré verticalement et horizontalement */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Largeur du contenu du modal */
-    max-width: 500px; /* Largeur maximale */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Style pour le bouton de fermeture */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    display: block;
+    width: 100%;
+    padding: 12px; /* Assurez-vous que le padding est confortable */
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #05162b;
+    color: var(--color-white); /* Utilisez la variable de couleur définie */
 }
 
-.close:hover,
-.close:focus {
-    color: rgb(85, 10, 10);
-    text-decoration: none;
+.button:hover {
+    background-color: #35478c; /* Utilisez une couleur hexadécimale directe */
+}
+
+.button.retrait,
+.button.solde,
+.button.retour {
+    background-color: rgba(1, 4, 24, 0.911);
+    color: var(--color-white); /* Utilisez la variable de couleur définie */
 }

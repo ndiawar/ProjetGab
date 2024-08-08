@@ -18,15 +18,16 @@ if (!localStorage.getItem('utilisateurs')) {
 }
 
 // Déclaration de variable pour enregistrer le nombre maximum de tentatives
+// et une variable pour mettre dans le local storage si l'utilisateur est bloqué après trois tentatives
 const maxAttempts = 3;
 const userAttempts = JSON.parse(localStorage.getItem('userAttempts')) || {};
 
 // Charge les données de l'utilisateur depuis le LocalStorage
 let storedUsers = JSON.parse(localStorage.getItem('utilisateurs')) || [];
-let currentUserIndex = localStorage.getItem('currentUserIndex') || 0; // Variable pour garder trace de l'utilisateur actuel
 let currentUser = null; // Stocke l'utilisateur actuellement connecté
 
 // On récupère les éléments id du formulaire pour interagir avec l'événement
+// Récupère id du paragraphe pour afficher les messages d'erreurs
 const loginForm = document.getElementById('loginForm');
 const errorMessage = document.getElementById('errorMessage');
 
@@ -95,67 +96,18 @@ loginForm.addEventListener('submit', function(event) {
 function verifierSolde() {
     // Récupère les informations de l'utilisateur depuis sessionStorage
     const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+
     if (currentUser) {
         // Affiche le solde de l'utilisateur s'il est connecté
-        alert(`Votre solde actuel est de ${currentUser.solde} FCFA.`);
+        alert(`Votre solde actuel est de ${currentUser.solde} Fcfa.`);
     } else {
         // Affiche un message d'erreur si aucun utilisateur n'est connecté
         alert("Utilisateur non connecté.");
     }
 }
 
-// Fonction pour mettre à jour l'affichage du solde
-function updateBalanceDisplay() {
-    let users = JSON.parse(localStorage.getItem('utilisateurs'));
-    if (users[currentUserIndex]) {
-        alert(`Votre nouveau solde est de : ${users[currentUserIndex].solde} FCFA`);
-    } else {
-        alert("Erreur: utilisateur non trouvé.");
-    }
-}
+// Récupération des éléments du DOM pour les boutons
+const soldeBtn = document.getElementById('soldeBtn');
 
-// Fonction pour effectuer un retrait
-function withdrawAmount(amount) {
-    let users = JSON.parse(localStorage.getItem('utilisateurs'));
-    if (users[currentUserIndex].solde >= amount) {
-        users[currentUserIndex].solde -= amount;
-        localStorage.setItem('utilisateurs', JSON.stringify(users));
-        alert(`Retrait réussi! Vous avez retiré ${amount} FCFA. Solde restant: ${users[currentUserIndex].solde} FCFA.`);
-        updateBalanceDisplay();
-    } else {
-        alert("Solde insuffisant");
-    }
-}
-
-// Fonction pour demander un montant personnalisé
-function withdrawCustomAmount() {
-    let input = prompt("Veuillez saisir le montant à retirer (multiple de 1000) :");
-
-    // Vérifier si l'entrée est un nombre entier valide et s'il est multiple de 1000
-    let customAmount = parseFloat(input.replace(/,/g, '')); // Supprime les virgules pour traiter le montant
-
-    // Vérifier si l'entrée est un nombre valide, entier, et multiple de 1000
-    if (Number.isInteger(customAmount) && customAmount > 0 && customAmount % 1000 === 0) {
-        withdrawAmount(customAmount);
-    } else {
-        alert("Montant invalide. Veuillez saisir un montant entier et multiple de 1000, sans virgule.");
-    }
-}
-
-// Fonction pour rediriger vers la page de retrait
-function redirectRetrait() {
-    window.location.href = './retrait.html'; // Redirection vers la page retrait
-}
-
-// Fonction pour changer l'utilisateur actuel
-function selectUser(index) {
-    currentUserIndex = index;
-    localStorage.setItem('currentUserIndex', currentUserIndex);
-    document.getElementById('current-user').textContent = JSON.parse(localStorage.getItem('utilisateurs'))[currentUserIndex].nom;
-    alert(`Utilisateur sélectionné : ${JSON.parse(localStorage.getItem('utilisateurs'))[currentUserIndex].nom}`);
-}
-
-// Initialisation de l'utilisateur affiché
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('current-user').textContent = JSON.parse(localStorage.getItem('utilisateurs'))[currentUserIndex].nom;
-});
+// Ajoute un gestionnaire d'événement pour le bouton "Vérifier le solde"
+soldeBtn.addEventListener('click', verifierSolde);
