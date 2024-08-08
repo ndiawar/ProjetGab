@@ -43,18 +43,9 @@
   box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    color: var(--color-text);
-    font-family: var(--font-text);
-    font-size: var(--font-size-normal);
-    font-weight: var(--font-weight-normal);
-    overflow-x: hidden;
-    background-color: var(--blue-sky-1);
-}
 
-/* PARTIE DU RECU*/
+
+/* PARTIE: RECU khalifa*/
 .mon_recu{
    padding: 20px;
     width: 30%;
@@ -69,11 +60,11 @@ body {
    font-size: 20px;
 
 }
-h1{
+#recu{
     text-align: center;
 }
 
-/*Partie Khalifa*/
+
 /*Style pour le modal (masqué par défaut) */
 
 #openModalButton{
@@ -134,4 +125,4 @@ h1{
     text-decoration: none;
 }
 
-/*Fin Partie*/
+/*Fin de la Partie de khalifa*/

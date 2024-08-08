@@ -9,7 +9,7 @@ openModalButton.onclick = function() {
 }
 
 // Quand l'utilisateur clique sur le <span> (x), fermer le modal
-closeButton.onclick = function() {
+closeButton.onclick = () => {
     modal.style.display = 'none';
 }
 
@@ -18,10 +18,15 @@ window.onclick = function(event) {
     if (event.target === modal) {
         modal.style.display = 'none';
     }
+    
+}// Afficher les informations utilisateur dans le modal
+function displayUserInfo() {
+    const userInfo = getUserInfo();
+
+    document.getElementById('idCard').textContent = utilisateur.idCard;
+    
+
+    // Afficher la date actuelle
+    document.getElementById('date').textContent = new Date().toLocaleDateString();
 }
-/*Lorsque l'utilisateur clique n'importe où en dehors du modal, fermer le modal*/
-window.onclick = function(event) {
- if (event.target == modal) {
-modal.style.display = "none";
- }
-}
+
