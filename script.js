@@ -1,32 +1,13 @@
-// Récupération des éléments
-const modal = document.getElementById('myModal');
-const openModalButton = document.getElementById('openModalButton');
-const closeButton = document.getElementsByClassName('close')[0];
-
-// Quand l'utilisateur clique sur le bouton, ouvrir le modal
-openModalButton.onclick = function() {
-    modal.style.display = 'block';
-}
-
-// Quand l'utilisateur clique sur le <span> (x), fermer le modal
-closeButton.onclick = () => {
-    modal.style.display = 'none';
-}
-
-// Quand l'utilisateur clique en dehors du modal, fermer le modal
-window.onclick = function(event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-    
-}// Afficher les informations utilisateur dans le modal
-function displayUserInfo() {
-    const userInfo = getUserInfo();
-
-    document.getElementById('idCard').textContent = utilisateur.idCard;
-    
-
-    // Afficher la date actuelle
-    document.getElementById('date').textContent = new Date().toLocaleDateString();
-}
-
+//Déclaration du tableau utilisateurs avec des valeurs d'objets
+const utilisateurs = [
+    { idCard: '1001', mdp: '51234', etatCmpt: false, nom: 'Dupont', prenom: 'Jean' },
+    { idCard: '1002', mdp: '95678', etatCmpt: false, nom: 'Martin', prenom: 'Marie' },
+    { idCard: '1003', mdp: '45637', etatCmpt: false, nom: 'Durand', prenom: 'Pierre' },
+    { idCard: '1004', mdp: '98712', etatCmpt: false, nom: 'Leroy', prenom: 'Luc' },
+    { idCard: '1005', mdp: '45632', etatCmpt: false, nom: 'Moreau', prenom: 'Sophie' },
+    { idCard: '1006', mdp: '54832', etatCmpt: false, nom: 'Simon', prenom: 'Laura' },
+    { idCard: '1007', mdp: '12345', etatCmpt: false, nom: 'Lambert', prenom: 'Alex' },
+    { idCard: '1008', mdp: '67890', etatCmpt: false, nom: 'Garcia', prenom: 'Elena' },
+    { idCard: '1009', mdp: '11223', etatCmpt: false, nom: 'Bernard', prenom: 'Nicolas' },
+    { idCard: '1010', mdp: '44556', etatCmpt: false, nom: 'Petit', prenom: 'Lucie' }
+];
