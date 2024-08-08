@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Banque - Bienvenue</title>
+</head>
+<body>
+    <!-- Boutons pour vérifier le solde et effectuer un retrait -->
+    <button id="soldeButton">Vérifier le Solde</button>
+    <button id="retraitButton">Effectuer un Retrait</button>
+
+    <!-- Le modal -->
+    <div id="myModal" class="modal">
+        <!-- Contenu du modal -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Titre du Modal</h2>
+            <p id="modalContent">Contenu du modal.</p>
+
+            <!-- Section de retrait, masquée par défaut -->
+            <div id="retraitOptions" style="display: none;">
+                <button class="retrait-option" data-amount="1000">1000 FCFA</button>
+                <button class="retrait-option" data-amount="5000">5000 FCFA</button>
+                <button class="retrait-option" data-amount="10000">10000 FCFA</button>
+                <button id="autreMontant">Autre Montant</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bouton pour déconnexion -->
+    <button id="deconnexionButton">Déconnexion</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
